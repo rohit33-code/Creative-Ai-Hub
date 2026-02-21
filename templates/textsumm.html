@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <title>Cyborg - Awesome HTML5 Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="/static/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="/static/assets/css/templatemo-cyborg-gaming.css">
+    <link rel="stylesheet" href="/static/assets/css/owl.css">
+    <link rel="stylesheet" href="/static/assets/css/animate.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/static/styleimage.css">
+    <link rel="stylesheet" href="/static/textsumm.css">
+
+    <!--
+
+
+-->
+</head>
+
+<body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <img src="/static/assets/images/logo.png" alt="">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/Image">Image Generator</a></li>
+                            <li><a href="/Anime">Anime</a></li>
+                            <li><a href="/Background">Background</a></li>
+                            <li><a href="/Language">Translation</a></li>
+                            <li><a href="/Text">summarization</a></li>
+                            <li><a href="/Voice">Speech</a></li>
+                            <!-- <li><a href="/login">login </a></li> -->
+                            {% if session.get('user') %}
+                            <li><a href="/admin">Admin</a></li>
+                            <li><a href="/logout">Logout</a></li>
+                            {% else %}
+                            <li><a href="/login">Login</a></li>
+                            {% endif %}
+                        </ul>
+
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="page-content">
+
+                    <!-- ***** Banner Start ***** -->
+                    <div class="main-banner">
+                        <div class="row">
+                            <div class="col-lg-7">
+        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ***** Banner End ***** -->
+            </div>
+
+
+            <div class="container6">
+                {% if session.get('user') %}
+                <form action="/Text" method="post">
+
+
+                    <h2>Text Summarization</h2>
+
+                    <!-- User Input -->
+                    <div class="summary-box">
+                        <textarea name="input_text" placeholder="Paste your long text here..." required></textarea>
+                    </div>
+
+                    <!-- Generate Button -->
+                    <button type="submit">Generate Summary</button>
+
+                    <!-- Summary Output -->
+                    <div class="summary-box">
+                        <textarea name="summary" placeholder="Summary will appear here..."
+                            readonly>{{ summary }}</textarea>
+                    </div>
+
+                </form>
+
+
+                {% else %}
+                <textarea name="prompt" placeholder="Enter your prompt..." required></textarea>
+                <h3 style="color:red; text-align:center;">Please login to generate Text summarization</h3>
+
+                <a href="/login">
+                    <button>Login</button>
+                </a>
+
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright © 2025<a href="#">Creative Ai Hub</a> . All rights reserved.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="/static/jquery/jquery.min.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="/static/assets/js/isotope.js"></script>
+    <script src="/static/assets/js/owl-carousel.js"></script>
+    <script src="/static/assets/js/tabs.js"></script>
+    <script src="/static/assets/js/popup.js"></script>
+    <script src="/static/assets/js/custom.js"></script>
+    <script src="/static/indeximaage.js"></script>
+
+
+</body>
+
+</html>

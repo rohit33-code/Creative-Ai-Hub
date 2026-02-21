@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <title>Cyborg - Awesome HTML5 Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="/static/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="/static/assets/css/templatemo-cyborg-gaming.css">
+    <link rel="stylesheet" href="/static/assets/css/owl.css">
+    <link rel="stylesheet" href="/static/assets/css/animate.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/static/styleimage.css">
+    <link rel="stylesheet" href="/static/textsumm.css">
+    <link rel="stylesheet" href="/static/anime.css">
+
+    <!--
+
+TemplateMo 579 Cyborg Gaming
+
+https://templatemo.com/tm-579-cyborg-gaming
+
+-->
+</head>
+
+<body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <img src="/static/assets/images/logo.png" alt="">
+                        </a>
+
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/Image">Image Generator</a></li>
+                            <li><a href="/Anime">Anime</a></li>
+                            <li><a href="/Background">Background</a></li>
+                            <li><a href="/Language">Translation</a></li>
+                            <li><a href="/Text">summarization</a></li>
+                            <li><a href="/Voice">Speech</a></li>
+                            <!-- <li><a href="/login">login </a></li> -->
+                            {% if session.get('user') %}
+                            <li><a href="/admin">Admin</a></li>
+                            <li><a href="/logout">Logout</a></li>
+                            {% else %}
+                            <li><a href="/login">Login</a></li>
+                            {% endif %}
+                        </ul>
+
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="page-content">
+
+                    <!-- ***** Banner Start ***** -->
+                    <div class="main-banner">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <!-- <div class="header-text"> -->
+                                <!-- <h6>Text to Image AI</h6> -->
+                                <h4><em>image</em> To Anime Generator</h4>
+                                <!-- <div class="main-button">
+                    <a href="browse.html">Browse Now</a>
+                  </div>  -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ***** Banner End ***** -->
+
+
+
+
+
+
+                <div class="container4">
+
+                    <h2>Image To Anime</h2>
+
+                    {% if session.get('user') %}
+                    <form action="/Anime" method="POST" enctype="multipart/form-data">
+
+                        <div class="upload-box">
+                            <input type="file" name="image" id="imageInput" accept="image/*" required>
+                        </div>
+
+                        <!-- Style Selector -->
+                        <select name="style" required style="
+            padding:10px;
+            width:100%;
+            margin-top:15px;
+            border-radius:10px;
+            border:2px solid #6c63ff;
+            background:#f5f4ff;
+            font-size:16px;
+            cursor:pointer;
+        ">
+                            <option value="face2paint">Face2Paint (Soft Anime)</option>
+                            <option value="paprika">Paprika (Artistic Anime)</option>
+                            <option value="webtoon">Webtoon (Cartoon Look)</option>
+                        </select>
+
+                        <!-- Preview uploaded image -->
+                        <img id="previewImg" style="display:none; width:250px; margin-top:10px;" />
+
+                        <button class="generate-btn" type="submit">Generate</button>
+
+                    </form>
+                    {% else %}
+                    <div class="upload-box">
+                        <input type="file" name="image" id="imageInput" accept="image/*" required>
+                    </div>
+                    <br><br>
+                    <h2 style="color:rgb(227, 25, 25); font-weight:bold;">Please login to generate images.</h2>
+                    <a href="/login"><button>Go to Login</button></a>
+                    {% endif %}
+
+                    {% if error %}
+                    <div class="error-box">
+                        {{ error }}
+                    </div>
+                    {% endif %}
+
+
+                    {% if output_url %}
+                    <div class="image-wrapper">
+                        <img src="{{ output_url }}" alt="Anime Image" style="width:300px; border-radius:15px;">
+                    </div>
+
+                    <br>
+
+                    <a href="{{ output_url }}" download>
+                        <button class="generate-btn">Download</button>
+                    </a>
+                    {% endif %}
+
+                </div>
+
+
+
+
+
+
+                <div class="heading-section">
+                    <h4><em>Most Popular</em> Right Now</h4>
+                </div>
+                <div class="container1">
+                    <div class="item">
+                        <img src="/static/image/1c0cb961-3586-4e0f-84da-17859175ba70.webp" alt="img1" />
+                    </div>
+                    <div class="item">
+                        <img src="/static/image/create-compelling-closeup-portrait-anime-schoolgirl-her-face-canvas_952778-16451.avif" alt="img2" />
+                    </div>
+                    <div class="item">
+                        <img src="/static/image/OIP (1).webp" alt="img3" />
+                    </div>
+
+                    <div class="item">
+                        <img src="/static/image/girl-realistic_980716-67.avif" alt="img3" />
+                    </div>
+                    <div class="item">
+                        <img src="/static/image/girl-with-purple-hair-ponytail_855221-13445.avif" alt="img3" />
+                    </div>
+                    <div class="item">
+                        <img src="/static/image/OIP (2).webp" alt="img3" />
+                    </div>
+
+                    <div class="item">
+                        <img src="/static/image/image8webp.webp" alt="img3" />
+                    </div>
+
+                    <div class="item">
+                        <img src="/static/image/image11.webp" alt="img3" />
+                    </div>
+
+
+
+                </div>
+
+
+
+
+
+
+                <footer>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <p>Copyright © 2025<a href="#">Creative Ai Hub</a> . All rights reserved.
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+
+
+                <!-- Scripts -->
+                <!-- Bootstrap core JavaScript -->
+                <script src="/static/jquery/jquery.min.js"></script>
+                <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+
+                <script src="/static/assets/js/isotope.js"></script>
+                <script src="/static/assets/js/owl-carousel.js"></script>
+                <script src="/static/assets/js/tabs.js"></script>
+                <script src="/static/assets/js/popup.js"></script>
+                <script src="/static/assets/js/custom.js"></script>
+                <script src="/static/indeximaage.js"></script>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

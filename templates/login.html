@@ -1,0 +1,355 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #100000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: rgb(32, 31, 31);
+      width: 350px;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      color: rgb(233, 232, 232);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .input-box {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    .input-box input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      outline: none;
+      font-size: 15px;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background: #6366f1;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+      margin-left: 10px;
+    }
+
+    .btn:hover {
+      background: #4f4fdd;
+    }
+
+    .link {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    a {
+      color: #6366f1;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h2>Login</h2>
+    {% if email_error %}
+    <p style="color:red">{{ email_error }}</p>
+    {% endif %}
+
+    {% if pass_error %}
+    <p style="color:red">{{ pass_error }}</p>
+    {% endif %}
+
+    {% if success %}
+    <p style="color:green">{{ success }}</p>
+    {% endif %}
+
+    <form action="/login" method="POST">
+
+      <div class="input-box">
+        <input type="email" placeholder="Enter Email" required name="email" />
+      </div>
+
+      <div class="input-box">
+        <input type="password" placeholder="Enter Password" required name="password" />
+      </div>
+
+      <button class="btn">Login</button>
+
+      <p class="link">Don't have an account? <a href="signup">Signup</a></p>
+
+    </form>
+  </div>
+
+</body>
+
+</html>
+
+
+
+ -->
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <title>Cyborg - Awesome HTML5 Template</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="/static/assets/css/fontawesome.css">
+  <link rel="stylesheet" href="/static/assets/css/templatemo-cyborg-gaming.css">
+  <link rel="stylesheet" href="/static/assets/css/owl.css">
+  <link rel="stylesheet" href="/static/assets/css/animate.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="/static/styleimage.css">
+
+  <!--
+
+TemplateMo 579 Cyborg Gaming
+
+https://templatemo.com/tm-579-cyborg-gaming
+
+-->
+
+
+
+  <style>
+    .one1 {
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* height: 100vh; */
+      padding: 0;
+      width: 400px;
+    }
+
+    .container10 {
+      background: rgb(32, 31, 31);
+      width: 350px;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      color: rgb(233, 232, 232);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .input-box {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    .input-box input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      outline: none;
+      font-size: 15px;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background: #6366f1;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background: #4f4fdd;
+    }
+
+    .link {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    a {
+      color: #6366f1;
+      text-decoration: none;
+    }
+
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo">
+              <img src="/static/assets/images/logo.png" alt="">
+            </a>
+
+            <ul class="nav">
+              <li><a href="/">Home</a></li>
+              <li><a href="/Image">Image Generator</a></li>
+              <li><a href="/Anime">Anime</a></li>
+              <li><a href="/Background">Background</a></li>
+              <li><a href="/Language">Translation</a></li>
+              <li><a href="/Text">summarization</a></li>
+              <li><a href="/Voice">Speech</a></li>
+              <!-- <li><a href="/login">login </a></li> -->
+              {% if session.get('user') %}
+              <li><a href="/admin">Admin</a></li>
+              <li><a href="/logout">Logout</a></li>
+              {% else %}
+              <li><a href="/login">Login</a></li>
+              {% endif %}
+            </ul>
+
+            <a class='menu-trigger'>
+              <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="container one1">
+    <div class="row">
+      <div class="page-content">
+
+
+        <div class="container10 ">
+          <h2>Login</h2>
+          {% if email_error %}
+          <p style="color:red">{{ email_error }}</p>
+          {% endif %}
+
+          {% if pass_error %}
+          <p style="color:red">{{ pass_error }}</p>
+          {% endif %}
+
+          {% if success %}
+          <p style="color:green">{{ success }}</p>
+          {% endif %}
+
+          <form action="/login" method="POST">
+
+            <div class="input-box">
+              <input type="email" placeholder="Enter Email" required name="email" />
+            </div>
+
+            <div class="input-box">
+              <input type="password" placeholder="Enter Password" required name="password" />
+            </div>
+
+            <button class="btn">Login</button>
+
+            <p class="link">Don't have an account? <a href="signup">Signup</a></p>
+
+          </form>
+        </div>
+
+
+      </div>
+
+
+
+
+
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <p>Copyright © 2025<a href="#">Creative Ai Hub</a> . All rights reserved.
+
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="/static/jquery/jquery.min.js"></script>
+  <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="/static/assets/js/isotope.js"></script>
+  <script src="/static/assets/js/owl-carousel.js"></script>
+  <script src="/static/assets/js/tabs.js"></script>
+  <script src="/static/assets/js/popup.js"></script>
+  <script src="/static/assets/js/custom.js"></script>
+  <script src="/static/indeximaage.js"></script>
+
+
+</body>
+
+</html>

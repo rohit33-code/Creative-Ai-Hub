@@ -1,0 +1,82 @@
+    .main-banner {
+  background-image: url(/static/image/anime-photo-ai.webp);
+  background-position:center center;
+  background-size:cover;
+  min-height: 380px;
+  border-radius: 23px;
+  padding: 80px 60px;
+}
+  .container4 {
+            width: 100%;
+            max-width: 650px;
+            background: #111;
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 80px;
+        }
+
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 28px;
+        }
+
+        .upload-box {
+            background: #222;
+            padding: 18px;
+            border-radius: 10px;
+            border: 1px solid #444;
+        }
+
+        input[type="file"] {
+            width: 100%;
+            background: #333;
+            padding: 12px;
+            color: #fff;
+            border-radius: 8px;
+            border: 1px solid #555;
+            cursor: pointer;
+        }
+
+        /* OUTPUT BOX */
+        .output-wrapper {
+            margin-top: 20px;
+            background: #222;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #555;
+            text-align: center;
+        }
+
+        .output-wrapper img {
+            width: 100%;
+            border-radius: 10px;
+            background: #000;
+        }
+
+        /* Buttons */
+        button,
+        .download-btn {
+            width: 100%;
+            padding: 14px;
+            font-size: 18px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .generate-btn {
+            background: #28a745;
+            color: #fff;
+        }
+
+        .download-btn {
+            background: #007bff;
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            line-height: 45px;
+        }

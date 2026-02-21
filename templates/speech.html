@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <title>Cyborg - Awesome HTML5 Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="/static/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="/static/assets/css/templatemo-cyborg-gaming.css">
+    <link rel="stylesheet" href="/static/assets/css/owl.css">
+    <link rel="stylesheet" href="/static/assets/css/animate.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/static/styleimage.css">
+    <link rel="stylesheet" href="/static/textsumm.css">
+    <link rel="stylesheet" href="/static/speech.css">
+
+    <!--
+
+TemplateMo 579 Cyborg Gaming
+
+https://templatemo.com/tm-579-cyborg-gaming
+
+-->
+</head>
+
+<body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <img src="/static/assets/images/logo.png" alt="">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/Image">Image Generator</a></li>
+                            <li><a href="/Anime">Anime</a></li>
+                            <li><a href="/Background">Background</a></li>
+                            <li><a href="/Language">Translation</a></li>
+                            <li><a href="/Text">summarization</a></li>
+                            <li><a href="/Voice">Speech</a></li>
+                            <!-- <li><a href="/login">login </a></li> -->
+                            {% if session.get('user') %}
+                            <li><a href="/admin">Admin</a></li>
+                            <li><a href="/logout">Logout</a></li>
+                            {% else %}
+                            <li><a href="/login">Login</a></li>
+                            {% endif %}
+                        </ul>
+
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="page-content">
+
+                    <!-- ***** Banner Start ***** -->
+                    <div class="main-banner">
+                        <div class="row">
+                            <div class="col-lg-7">
+  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ***** Banner End ***** -->
+
+
+
+                <div class="container3">
+
+
+
+                    {% if session.get('user') %}
+                    <form action="/Voice" method="POST">
+                        <label>Enter Text:</label>
+                        <textarea name="textInput" placeholder="Type your text here..." required></textarea>
+
+                        <label>Select Voice:</label>
+
+                        <select name="voiceSelect" required>
+
+                            <!-- English -->
+                            <option value="en_male">English - Male</option>
+                            <option value="en_female">English - Female</option>
+
+                            <!-- Hindi -->
+                            <option value="hi_male">Hindi - Male</option>
+                            <option value="hi_female">Hindi - Female</option>
+
+                            <!-- Spanish -->
+                            <option value="es_male">Spanish - Male</option>
+                            <option value="es_female">Spanish - Female</option>
+
+                            <!-- French -->
+                            <option value="fr_male">French - Male</option>
+                            <option value="fr_female">French - Female</option>
+
+                            <!-- Arabic -->
+                            <option value="ar_male">Arabic - Male</option>
+                            <option value="ar_female">Arabic - Female</option>
+
+                            <!-- Chinese Simplified -->
+                            <option value="zh_CN_male">Chinese (Simplified) - Male</option>
+                            <option value="zh_CN_female">Chinese (Simplified) - Female</option>
+
+                            <!-- Chinese Traditional -->
+                            <option value="zh_TW_male">Chinese (Traditional) - Male</option>
+                            <option value="zh_TW_female">Chinese (Traditional) - Female</option>
+
+                            <!-- German -->
+                            <option value="de_male">German - Male</option>
+                            <option value="de_female">German - Female</option>
+
+                            <!-- Russian -->
+                            <option value="ru_male">Russian - Male</option>
+                            <option value="ru_female">Russian - Female</option>
+
+                            <!-- Japanese -->
+                            <option value="ja_male">Japanese - Male</option>
+                            <option value="ja_female">Japanese - Female</option>
+
+                            <!-- Korean -->
+                            <option value="ko_male">Korean - Male</option>
+                            <option value="ko_female">Korean - Female</option>
+
+                            <!-- Italian -->
+                            <option value="it_male">Italian - Male</option>
+                            <option value="it_female">Italian - Female</option>
+
+                            <!-- Bengali -->
+                            <option value="bn_male">Bengali - Male</option>
+                            <option value="bn_female">Bengali - Female</option>
+
+                            <!-- Urdu -->
+                            <option value="ur_male">Urdu - Male</option>
+                            <option value="ur_female">Urdu - Female</option>
+
+                            <!-- Tamil -->
+                            <option value="ta_male">Tamil - Male</option>
+                            <option value="ta_female">Tamil - Female</option>
+
+                            <!-- Telugu -->
+                            <option value="te_male">Telugu - Male</option>
+                            <option value="te_female">Telugu - Female</option>
+
+                            <!-- Gujarati -->
+                            <option value="gu_male">Gujarati - Male</option>
+                            <option value="gu_female">Gujarati - Female</option>
+
+                        </select>
+
+
+                        <button class="btn-generate" name="action" value="generate" type="submit">Generate
+                            Speech</button>
+
+                    </form>
+                    {% else %}
+
+                    <!-- ========== USER NOT LOGGED IN → SHOW LOGIN BUTTON ========== -->
+
+                    <div style="text-align:center; margin-top: 20px;">
+                        <textarea name="prompt" placeholder="Enter your prompt..." required></textarea>
+
+                        <h3 style="color:red;">You must be logged in to use Voice Generator.</h3>
+                        <br>
+                        <a href="/login">
+                            <button class="btn-generate">
+                                Login Now
+                            </button>
+                        </a>
+                    </div>
+
+                    {% endif %}
+                    <br><br>
+
+                    {% if error %}
+                    <div style="color: red; font-weight: bold; margin-bottom: 15px;">
+                        {{ error }}
+                    </div>
+                    {% endif %}
+
+
+
+
+                    {% if session.get('user') %}
+
+                    <audio controls id="player">
+                        {% if audio_file %}
+                        <source src="{{ audio_file }}" type="audio/mp3">
+                        {% endif %}
+                    </audio>
+
+                    {% endif %}
+
+
+                </div>
+
+                <div class="heading-section">
+                    <h4><em>Most Popular</em> Right Now</h4>
+                </div>
+                <div class="card-container">
+
+                    <!-- TEMPLATE CARD 1 -->
+                    <!-- <div class="card">
+                        <div class="image-wrapper">
+                            <img src="/static/audio/image/Audiobook.png" class="card-img">
+                            <div class="play-btn" data-audio="audio1">
+                                ▶
+                            </div>
+                        </div>
+
+                        <div class="details">
+                            <h3>Whisper to Sleep</h3>
+                            <p>Japanese • Whisper</p>
+                        </div>
+
+                        <audio id="audio1" src="/static/audio/Horrible0625.mp3"></audio>
+                    </div> -->
+
+
+                    <!-- TEMPLATE CARD 2 -->
+                    <div class="card">
+                        <div class="image-wrapper">
+                            <img src="/static/audio/image/Education.png" class="card-img">
+                            <div class="play-btn" data-audio="audio1">
+                                ▶
+                            </div>
+                        </div>
+
+                        <div class="details">
+                            <h3>A Tale of Terror</h3>
+                            <p>English • Horror</p>
+                        </div>
+
+                        <audio id="audio1" src="/static/audio/Horrible0625.mp3"></audio>
+                    </div>
+
+
+                    <!-- TEMPLATE CARD 3 -->
+                    <div class="card">
+                        <div class="image-wrapper">
+                            <img src="/static/audio/image/Audio-aids.png" class="card-img">
+                            <div class="play-btn" data-audio="audio2">
+                                ▶
+                            </div>
+                        </div>
+
+                        <div class="details">
+                            <h3>Goblin Bargain</h3>
+                            <p>Character • Fantasy</p>
+                        </div>
+
+                        <audio id="audio2" src="/static/audio/Goblin0625.mp3"></audio>
+                    </div>
+                    <div class="card">
+                        <div class="image-wrapper">
+                            <img src="/static/audio/image/Meditations-Wellness.png" class="card-img">
+                            <div class="play-btn" data-audio="audio3">
+                                ▶
+                            </div>
+                        </div>
+
+                        <div class="details">
+                            <h3>Lecture Mode: On</h3>
+                            <p>English • Education</p>
+                        </div>
+
+                        <audio id="audio3" src="/static/audio/Lecture0625.mp3"></audio>
+                    </div>
+
+
+                    <!-- TEMPLATE CARD 2 -->
+                    <div class="card">
+                        <div class="image-wrapper">
+                            <img src="/static/audio/image/others.png" class="card-img">
+                            <div class="play-btn" data-audio="audio4">
+                                ▶
+                            </div>
+                        </div>
+
+                        <div class="details">
+                            <h3>Pitch the Vision</h3>
+                            <p>English • Presentation</p>
+                        </div>
+
+                        <audio id="audio4" src="/static/audio/Sale0625.mp3"></audio>
+                    </div>
+
+
+                    <!-- TEMPLATE CARD 3 -->
+                    <div class="card">
+                        <div class="image-wrapper">
+                            <img src="/static/audio/image/Voiceover.png" class="card-img">
+                            <div class="play-btn" data-audio="audio5">
+                                ▶
+                            </div>
+                        </div>
+
+                        <div class="details">
+                            <h3>Story of Fear</h3>
+                            <p>Hindi  • Character</p>
+                        </div>
+
+                        <audio id="audio5" src="/static/audio/hindi.mp3"></audio>
+                    </div>
+
+                </div>
+
+
+                <footer>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <p>Copyright © 2025<a href="#">Creative Ai Hub</a> . All rights reserved.
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+
+
+                <!-- Scripts -->
+                <!-- Bootstrap core JavaScript -->
+                <script src="/static/jquery/jquery.min.js"></script>
+                <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+
+                <script src="/static/assets/js/isotope.js"></script>
+                <script src="/static/assets/js/owl-carousel.js"></script>
+                <script src="/static/assets/js/tabs.js"></script>
+                <script src="/static/assets/js/popup.js"></script>
+                <script src="/static/assets/js/custom.js"></script>
+                <script src="/static/indeximaage.js"></script>
+                <script src="/static/speech.js"></script>
+
+
+</body>
+
+</html>

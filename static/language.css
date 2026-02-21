@@ -1,0 +1,50 @@
+.main-banner {
+  background-image: url(/static/image/Language-Translation-AI-Tools-copy.webp);
+  background-position:center center;
+  background-size:cover;
+  min-height: 380px;
+  border-radius: 23px;
+  padding: 80px 60px;
+}
+
+
+
+
+.container2 {
+/* max-width: 1000px; */
+margin: auto;
+background: rgb(18, 17, 17);
+padding: 20px;
+margin: 20px;
+margin-top: 90px;
+border-radius: 10px;
+box-shadow: 0 4px 12px rgba(49, 38, 38, 0.104);
+color: #6a6868;
+}
+textarea {
+width: 100%;
+height: 120px;
+padding: 10px;
+border-radius: 6px;
+background-color: black;
+border: 1px solid #232121;
+font-size: 15px;
+}
+select {
+padding: 8px;
+border-radius: 6px;
+border: 1px solid #201d1d;
+margin-top: 10px;
+font-size: 15px;
+}
+button {
+padding: 10px 15px;
+border: none;
+border-radius: 6px;
+margin-top: 15px;
+cursor: pointer;
+font-size: 16px;
+}
+.btn-generate { background: #0078ff; color: white; }
+.btn-download { background: #28a745; color: white; margin-left: 10px; }
+
